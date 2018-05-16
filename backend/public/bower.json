@@ -1,0 +1,22 @@
+{
+  "name": "public",
+  "authors": [
+    "Ziv Cohen <zivcohen21@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#^5.5.3",
+    "ember": "components/ember#^2.18.2",
+    "ember-data": "components/ember-data#^3.0.1"
+  }
+}
