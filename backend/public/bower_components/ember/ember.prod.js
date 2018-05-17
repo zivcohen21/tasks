@@ -12944,7 +12944,7 @@ enifed('ember-application/system/engine', ['exports', 'ember-babel', 'ember-util
           var userConfig, userConfigEncoded, store;
           // We have a HTML escaped JSON representation of the user's basic
           // configuration generated server side and stored in the DOM of the main
-          // index.html file. This allows the app to have access to a set of data
+          // index.php file. This allows the app to have access to a set of data
           // without making any additional remote calls. Good for basic data that is
           // needed for immediate rendering of the page. Keep in mind, this data,
           // like all local models and data can be manipulated by the user, so it

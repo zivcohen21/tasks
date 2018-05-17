@@ -61188,7 +61188,7 @@ enifed('ember-runtime/tests/system/lazy_load_test', ['ember-metal', 'ember-runti
 
   QUnit.test('hooks in ENV.EMBER_LOAD_HOOKS[\'hookName\'] get executed', function () {
     // Note that the necessary code to perform this test is run before
-    // the Ember lib is loaded in tests/index.html
+    // the Ember lib is loaded in tests/index.php
 
     (0, _emberMetal.run)(function () {
       (0, _lazy_load.runLoadHooks)('__before_ember_test_hook__', 1);
