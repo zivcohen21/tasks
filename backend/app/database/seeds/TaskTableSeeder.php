@@ -15,7 +15,7 @@ class TaskTableSeeder extends Seeder
 
         DB::table('tasks')->delete();
 
-        User::create(array(
+        Task::create(array(
             'title' => 'first task',
             'isDone' => false
         ));

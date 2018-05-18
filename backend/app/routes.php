@@ -11,7 +11,27 @@
 |
 */
 
+
 Route::get('/', function()
 {
     return View::make('index');
 });
+
+Route::group(array('prefix' => ''), function()
+{
+    Route::resource('todos', 'TaskController');
+});
+/*Route::get('task', function()
+{
+    $title = Input::get('title');
+
+    Log::info($title);
+});*/
+
+/*Route::get('todos', function()
+{
+    $myArr = array("John", "Mary", "Peter", "Sally");
+
+    echo $myArr;
+    return Response::json($myArr);
+});*/

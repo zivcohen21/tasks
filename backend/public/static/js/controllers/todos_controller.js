@@ -4,7 +4,7 @@ Todos.TodosController = Ember.ArrayController.extend({
             // Get the todo title set by the "New Todo" text field
             var title = this.get('newTitle');
             if (!title.trim()) { return; }
-
+            var self = this;
             // Create the new Todo model
             var todo = this.store.createRecord('todo', {
                 title: title,
@@ -14,8 +14,8 @@ Todos.TodosController = Ember.ArrayController.extend({
             // Clear the "New Todo" text field
             this.set('newTitle', '');
 
-            // Save the new model
             todo.save();
+
         }
     },
     remaining: function() {
@@ -27,3 +27,4 @@ Todos.TodosController = Ember.ArrayController.extend({
         return remaining === 1 ? 'item' : 'items';
     }.property('remaining')
 });
+

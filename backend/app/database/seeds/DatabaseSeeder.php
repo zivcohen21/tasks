@@ -9,10 +9,7 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		Eloquent::unguard();
-
-		$this->call('TaskTableSeeder');
-        $this->command->info('Task table seeded!');
+        $this->call('TaskTableSeeder');
 	}
 
 }

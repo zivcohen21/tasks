@@ -10,28 +10,22 @@ class CreateTasksTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function up()
-	{
-		Schema::table('tasks', function(Blueprint $table)
-		{
+
+    public function up()
+    {
+        Schema::create('tasks', function(Blueprint $table)
+        {
             $table->increments('id');
             $table->string('title');
             $table->boolean('isDone');
             $table->timestamps();
-		});
-	}
+        });
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::table('tasks', function(Blueprint $table)
-		{
-			//
-		});
-	}
+    public function down()
+    {
+        Schema::dropIfExists('tasks');
+    }
+
 
 }

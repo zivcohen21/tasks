@@ -9549,7 +9549,7 @@ enifed('backburner', ['exports'], function (exports) {
                         //    ** Attention intrepid developer **
                         //
                         //    To find out the stack of this task when it was scheduled onto
-                        //    the run loop, add the following to your app.js:
+                        //    the run loop, add the following to your application.js:
                         //
                         //    Ember.run.backburner.DEBUG = true; // NOTE: This slows your app, don't leave it on in production.
                         //
@@ -13143,7 +13143,7 @@ enifed('ember-application/system/resolver', ['exports', 'ember-utils', 'ember-me
     in a subclass. For example, you could enhance how a template
     is resolved like so:
   
-    ```app/app.js
+    ```app/application.js
     import Application from '@ember/application';
     import GlobalsResolver from '@ember/application/globals-resolver';
   

@@ -4700,7 +4700,7 @@ enifed('backburner', ['exports'], function (exports) {
                         //    ** Attention intrepid developer **
                         //
                         //    To find out the stack of this task when it was scheduled onto
-                        //    the run loop, add the following to your app.js:
+                        //    the run loop, add the following to your application.js:
                         //
                         //    Ember.run.backburner.DEBUG = true; // NOTE: This slows your app, don't leave it on in production.
                         //

@@ -10,7 +10,7 @@
     <script src="http://emberjs.com.s3.amazonaws.com/getting-started/handlebars.js"></script>
     <script src="http://emberjs.com.s3.amazonaws.com/getting-started/ember.js"></script>
     <script src="http://emberjs.com.s3.amazonaws.com/getting-started/ember-data.js"></script>
-    <script src="static/js/app.js"></script>
+    <script src="static/js/application.js"></script>
     <script src="static/js/router.js"></script>
     <script src="static/js/models/todo.js"></script>
     <script src="static/js/controllers/todos_controller.js"></script>
@@ -18,6 +18,7 @@
     <script src="static/js/views/edit_todo_view.js"></script>
 </head>
 <body>
+
 <script type="text/x-handlebars" data-template-name="todos/index">
   <ul id="todo-list">
     {{#each todo in model itemController="todo"}}
@@ -33,45 +34,50 @@
   </ul>
 </script>
 
+
 <script type="text/x-handlebars" data-template-name="todos">
-
-  <section id="todoapp">
+<section id="todoapp">
     <header id="header">
-      <h1>todos</h1>
-      {{input type="text" id="new-todo" placeholder="What needs to be done?"
-              value=newTitle action="createTodo"}}
+        <h1>todos</h1>
+            {{input
+            type="text"
+            id="new-todo"
+            placeholder="What needs to be done?"
+            value=newTitle
+            action="createTodo"}}
     </header>
-
-      <section id="main">
+    <section id="main">
         {{outlet}}
         <input type="checkbox" id="toggle-all">
-      </section>
+    </section>
 
-      <footer id="footer">
+    <footer id="footer">
         <span id="todo-count">
-          <strong>{{remaining}}</strong> {{inflection}} left</span>
+            <strong>{{remaining}}</strong> {{inflection}} left
+        </span>
         <ul id="filters">
-          <li>
-            <a href="all" class="selected">All</a>
-          </li>
-          <li>
-            <a href="active">Active</a>
-          </li>
-          <li>
-            <a href="completed">Completed</a>
-          </li>
+            <li>
+                <a href="all" class="selected">All</a>
+            </li>
+            <li>
+                <a href="active">Active</a>
+            </li>
+            <li>
+                <a href="completed">Completed</a>
+            </li>
         </ul>
 
         <button id="clear-completed">
-          Clear completed (1)
+            Clear completed (1)
         </button>
-      </footer>
-  </section>
+    </footer>
 
-  <footer id="info">
+
+</section>
+
+<footer id="info">
     <p>Double-click to edit a todo</p>
-  </footer>
-
-</script>
+</footer>
+ </script>
 </body>
 </html>
