@@ -19,7 +19,7 @@ Route::get('/', function()
 
 Route::group(array('prefix' => ''), function()
 {
-    Route::resource('todos', 'TaskController');
+    Route::resource('todos', 'TodoController');
 });
 /*Route::get('task', function()
 {

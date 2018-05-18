@@ -1,6 +1,6 @@
 <?php
 
-class TaskController extends BaseController {
+class TodoController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -15,18 +15,17 @@ class TaskController extends BaseController {
                 'todo'  => []
             ];
 
-            $tasks = Task::all();
+            $tasks = Todo::all();
 
             foreach($tasks as $task){
 
                 $response['todo'][] = [
                     'id' => $task->id,
                     'title' => $task->title,
-                    'isDone' => $task->isDone
+                    'isCompleted' => $task->isCompleted
                 ];
             }
 
-            //echo  $response;
 
         } catch (Exception $e){
             $statusCode = 400;
@@ -56,11 +55,15 @@ class TaskController extends BaseController {
 	public function store()
 	{
         try{
-            $task = new Task;
-            $task->title = Input::get('title');
-            $task->isDone = Input::get('isCompleted');
+            $statusCode = 200;
+            error_log("hello");
 
-            $task->save();
+
+            $todo = new Todo;
+            $todo->title = Input::get('todo.title');
+            $todo->isCompleted = Input::get('todo.isCompleted');
+            $todo->save();
+
         }catch (Exception $e){
             $statusCode = 400;
         }finally{
@@ -113,7 +116,8 @@ class TaskController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+        $todo = Todo::find($id);
+        $todo->delete();
 	}
 
 

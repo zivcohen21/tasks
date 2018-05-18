@@ -11,7 +11,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Task extends Eloquent implements UserInterface, RemindableInterface {
+class Todo extends Eloquent {
 
     use UserTrait, RemindableTrait;
 
@@ -20,13 +20,13 @@ class Task extends Eloquent implements UserInterface, RemindableInterface {
      *
      * @var string
      */
-    protected $table = 'tasks';
+    protected $table = 'todo';
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = array('id', 'title', 'isDone');
+    protected $hidden = array('title', 'isCompleted');
 
 }

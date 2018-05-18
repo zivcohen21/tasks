@@ -6,18 +6,19 @@
  * Time: 12:03
  */
 
-class TaskTableSeeder extends Seeder
+class TodoTableSeeder extends Seeder
 {
     public function run()
     {
 
         Eloquent::unguard();
 
-        DB::table('tasks')->delete();
+        DB::table('todo')->delete();
 
-        Task::create(array(
+        Todo::create(array(
             'title' => 'first task',
-            'isDone' => false
+            'isCompleted' => false
         ));
     }
 }
+
