@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Ember.js • TodoMVC</title>
+    <title>Todo</title>
     <link rel="stylesheet" href="../static/css/style.css">
 
 
@@ -38,7 +38,6 @@
 <script type="text/x-handlebars" data-template-name="todos">
 <section id="todoapp">
     <header id="header">
-        <h1>todos</h1>
             {{input
             type="text"
             id="new-todo"
@@ -48,7 +47,6 @@
     </header>
     <section id="main">
         {{outlet}}
-        <input type="checkbox" id="toggle-all">
     </section>
 
     <footer id="footer">

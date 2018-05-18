@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0f784ea1-7862-4a03-bc1e-fc8bb92c9b3b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/controllers/TaskController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/database/migrations/2018_05_18_141349_create_tasks_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/database/seeds/TaskTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/models/Task.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/controllers/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/controllers/TodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/static/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TodoController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TodoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/app/controllers/TodoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+            <state relative-caret-position="607">
+              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/app/views/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/public/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="709">
+              <caret line="96" column="12" lean-forward="true" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -70,11 +85,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="b17e7f49de6248c770519cd64104cd35" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/app/storage/views/b17e7f49de6248c770519cd64104cd35">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/app/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,15 +112,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todos_controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/public/static/js/controllers/todos_controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -127,6 +128,7 @@
       <find>key</find>
       <find>ApplicationAdapter</find>
       <find>actions</find>
+      <find>header</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,13 +143,11 @@
         <option value="$PROJECT_DIR$/backend/app/views/js/libs/ember.js" />
         <option value="$PROJECT_DIR$/backend/app/views/js/libs/ember-data.js" />
         <option value="$PROJECT_DIR$/backend/app/views/style.css" />
-        <option value="$PROJECT_DIR$/backend/public/static/css/style.css" />
         <option value="$PROJECT_DIR$/backend/server.php" />
         <option value="$PROJECT_DIR$/backend/public/static/js/views/edit_todo_view.js" />
         <option value="$PROJECT_DIR$/backend/public/static/js/controllers/todo_controller.js" />
         <option value="$PROJECT_DIR$/backend/bootstrap/compiled.php" />
         <option value="$PROJECT_DIR$/backend/public/static/js/app.js" />
-        <option value="$PROJECT_DIR$/backend/app/views/index.php" />
         <option value="$PROJECT_DIR$/backend/public/static/js/router.js" />
         <option value="$PROJECT_DIR$/backend/public/static/js/application.js" />
         <option value="$PROJECT_DIR$/backend/app/database/seeds/DatabaseSeeder.php" />
@@ -165,6 +165,8 @@
         <option value="$PROJECT_DIR$/backend/app/database/seeds/TodoTableSeeder.php" />
         <option value="$PROJECT_DIR$/backend/app/database/migrations/2018_05_18_163815_create_todos_table.php" />
         <option value="$PROJECT_DIR$/backend/app/controllers/TodoController.php" />
+        <option value="$PROJECT_DIR$/backend/public/static/css/style.css" />
+        <option value="$PROJECT_DIR$/backend/app/views/index.php" />
       </list>
     </option>
   </component>
@@ -262,74 +264,13 @@
               <item name="buyme" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
               <item name="buyme" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyme" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -373,12 +314,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526491240769</updated>
-      <workItem from="1526491244451" duration="47324000" />
+      <workItem from="1526491244451" duration="50280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47324000" />
+    <option name="totallyTimeSpent" value="50280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -468,13 +409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/public/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="329" column="13" selection-start-line="329" selection-start-column="13" selection-end-line="329" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -590,13 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" selection-start-line="12" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/app/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
@@ -717,8 +644,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/app/controllers/TodoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+        <state relative-caret-position="607">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/public/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="96" column="12" lean-forward="true" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/app/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
         </state>
       </provider>
     </entry>
