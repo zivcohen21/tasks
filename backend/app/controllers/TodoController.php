@@ -104,10 +104,19 @@ class TodoController extends BaseController {
 	 */
 	public function update($id)
 	{
+
         $todo = Todo::find($id);
         $todo->title = Input::get('todo.title');
         $todo->isCompleted = Input::get('todo.isCompleted');
         $todo->save();
+
+        $response['todo'] = [
+            'id' => $todo->id,
+            'title' => $todo->title,
+            'isCompleted' => $todo->isCompleted
+        ];
+
+        return Response::json($response);
 	}
 
 

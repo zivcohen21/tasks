@@ -16,8 +16,10 @@ Todos.TodoController = Ember.ObjectController.extend({
             var todo = this.get('model');
             todo.deleteRecord();
             todo.save();
+
         }
     },
+
     isEditing: false,
 
     isCompleted: function(key, value){
@@ -28,9 +30,17 @@ Todos.TodoController = Ember.ObjectController.extend({
             return model.get('isCompleted');
         } else {
             // property being used as a setter
+
+            var checkboxes = $("input[type='checkbox']");
+            checkboxes.attr("disabled",true);
+
             model.set('isCompleted', value);
-            model.save();
+            model.save().then(function (data) {
+                checkboxes.attr("disabled",false);
+            });
+
             return value;
+
         }
-    }.property('model.isCompleted')
+    }.property('model.isCompleted'),
 });

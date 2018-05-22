@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Todo</title>
     <link rel="stylesheet" href="../static/css/style.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <script src="http://emberjs.com.s3.amazonaws.com/getting-started/jquery.min.js"></script>
     <script src="http://emberjs.com.s3.amazonaws.com/getting-started/handlebars.js"></script>
@@ -21,16 +21,18 @@
 
 <script type="text/x-handlebars" data-template-name="todos/index">
   <ul id="todo-list">
-    {{#each todo in model itemController="todo"}}
+    {{#eachIndexed todo in model itemController="todo"}}
       <li {{bind-attr class="todo.isCompleted:completed todo.isEditing:editing"}}>
         {{#if todo.isEditing}}
           {{edit-todo class="edit" value=todo.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
         {{else}}
           {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
-          <label {{action "editTodo" on="doubleClick"}}>{{todo.title}}</label><button {{action "removeTodo"}} class="destroy"></button>
+          <label {{action "editTodo" on="doubleClick"}}>
+          {{index_1}}.{{todo.title}}
+          </label><button {{action "removeTodo"}} class="destroy"></button>
         {{/if}}
       </li>
-    {{/each}}
+    {{/eachIndexed}}
   </ul>
 </script>
 
@@ -38,12 +40,19 @@
 <script type="text/x-handlebars" data-template-name="todos">
 <section id="todoapp">
     <header id="header">
+        <button id="addTaskBtn" {{action "openAddOption"}}><i class="fas fa-plus"></i></button>
+        {{#if isAdding}}
             {{input
             type="text"
             id="new-todo"
-            placeholder="What needs to be done?"
+            placeholder="משימה חדשה"
             value=newTitle
-            action="createTodo"}}
+            action="createTodo"
+            focus-out="acceptChanges"
+            insert-newline="acceptChanges"}}
+        {{else}}
+            <label id="taskTitle">משימות</label>
+        {{/if}}
     </header>
     <section id="main">
         {{outlet}}
@@ -51,31 +60,17 @@
 
     <footer id="footer">
         <span id="todo-count">
-            <strong>{{remaining}}</strong> {{inflection}} left
+            <strong>לסיום: {{remaining}}</strong>
         </span>
-        <ul id="filters">
-            <li>
-                <a href="all" class="selected">All</a>
-            </li>
-            <li>
-                <a href="active">Active</a>
-            </li>
-            <li>
-                <a href="completed">Completed</a>
-            </li>
-        </ul>
+        <span id="todo-count">
+            <strong>הושלמו: {{done}}</strong>
+        </span>
+        <span id="todo-count">
+            <strong>סה"כ: {{total}}</strong>
+        </span>
 
-        <button id="clear-completed">
-            Clear completed (1)
-        </button>
     </footer>
-
-
 </section>
-
-<footer id="info">
-    <p>Double-click to edit a todo</p>
-</footer>
  </script>
 </body>
 </html>
